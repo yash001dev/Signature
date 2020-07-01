@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100;1,200&display=swap" rel="stylesheet"> 
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    
+    <nav>
+      <div class="nav-wrapper">
+         <a href="" style="font-family: Montserrat;" class="brand-logo center ">SIGNATURE</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="left hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">Javascript</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+    </ul>
+
+  
+    <!-- Heading -->
+    <div class="container">
+      <h1 style="color: #ff5733; font-family: 'Montserrat';">Fill Details</h1>
+    </div>
+    
+    <div class="progress">
+        <div class="determinate" style="width: 50%"></div>
+    </div>
+      
+    <!-- End Heading -->
+    <br>
+    <!-- Form Starting -->
+    <div class="container row">
+        <form action="" class="col s12" method="POST">
+          {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="Name" placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">Enter Name</label>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="ItselfIntro" id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Give Information About Yourself</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="AdventureIntro" id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea2">How's Your Adventure Experience?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="SkillsIntro" id="textarea3" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea3">How You Grow Your Money Means SKILLS?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="JobIntro" id="textarea4" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea4">For Whom and Where You Use Skills Means JOB EXPERIENCE?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="SchollingIntro" id="textarea5" class="materialize-textarea" data-length="380"></textarea>
+                    <label for="textarea5">From Which University/Collage/School this Talent Comes Means SCHOOLING?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="ContactIntro" id="textarea6" class="materialize-textarea" data-length="380"></textarea>
+                    <label for="textarea6">How We Contact You Means Contact INFORMATION?</label>
+                </div>
+            </div>
+          
+    <button class="btn waves-effect waves-light" type="submit" name="action">Next
+        <i class="material-icons right">arrow_forward</i>
+    </button>
+    </form>
+    </div>
+        <!-- End Form Starting -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+        
+        $('input#input_text, textarea').characterCounter();
+        
+      });
+    </script>
+    </body>
+    </html>
+        
+    <!-- Form Ending -->
+
+            <!-- <div class="row">
+                <div class="input-field col s12">
+                    <input name="Name" placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">Enter Name</label>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="ItselfIntro" id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Give Information About Yourself</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="AdventureIntro" id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea2">How's Your Adventure Experience?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="SkillsIntro" id="textarea3" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea3">How You Grow Your Money Means SKILLS?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="JobIntro" id="textarea4" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea4">For Whom and Where You Use Skills Means JOB EXPERIENCE?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="SchollingIntro" id="textarea5" class="materialize-textarea" data-length="380"></textarea>
+                    <label for="textarea5">From Which University/Collage/School this Talent Comes Means SCHOOLING?</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="ContactIntro" id="textarea6" class="materialize-textarea" data-length="380"></textarea>
+                    <label for="textarea6">How We Contact You Means Contact INFORMATION?</label>
+                </div>
+            </div> -->
+             
+       
